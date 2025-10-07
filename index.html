@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tethor USD - Stable Digital Currency</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0070f3 0%, #00c4ff 100%);
+        }
+        .hero-radial {
+            background: radial-gradient(ellipse at center, rgba(0, 112, 243, 0.2) 0%, rgba(0, 112, 243, 0) 70%);
+        }
+        .token-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .vanta-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg" class="vanta-container"></div>
+
+    <!-- Navigation -->
+    <nav class="border-b border-gray-800 py-4 px-6 md:px-12 lg:px-24">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center">
+                    <i data-feather="dollar-sign" class="text-white"></i>
+                </div>
+                <span class="text-xl font-bold">Tethor USD</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-blue-400 transition">Home</a>
+                <a href="#" class="hover:text-blue-400 transition">How it Works</a>
+                <a href="#" class="hover:text-blue-400 transition">Developers</a>
+                <a href="#" class="hover:text-blue-400 transition">Ecosystem</a>
+            </div>
+            <button class="md:hidden">
+                <i data-feather="menu"></i>
+            </button>
+            <div class="hidden md:block">
+                <button class="gradient-bg px-6 py-2 rounded-lg font-medium hover:bg-blue-600 transition">
+                    Connect Wallet
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6 md:px-12 lg:px-24">
+        <div class="hero-radial absolute top-0 left-0 w-full h-full opacity-50"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                        Digital Dollar.<br>
+                        <span class="gradient-text">Stable Value.</span>
+                    </h1>
+                    <p class="text-xl text-gray-300 mb-8">
+                        Tethor USD (TUSD) is a fully collateralized stablecoin pegged 1:1 to the US Dollar. 
+                        The most transparent and reliable digital dollar on the market.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button class="gradient-bg px-8 py-3 rounded-lg font-medium hover:bg-blue-600 transition">
+                            Get Tethor USD
+                        </button>
+                        <button class="border border-blue-400 px-8 py-3 rounded-lg font-medium hover:bg-blue-900 transition">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full gradient-bg opacity-20 absolute -top-10 -left-10"></div>
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full gradient-bg opacity-10 absolute -bottom-10 -right-10"></div>
+                        <div class="relative bg-gray-800 bg-opacity-50 rounded-2xl p-8 border border-gray-700 backdrop-blur-lg shadow-2xl">
+                            <div class="flex justify-between items-center mb-6">
+                                <span class="text-gray-400">Balance</span>
+                                <i data-feather="eye" class="text-gray-400"></i>
+                            </div>
+                            <div class="text-3xl font-bold mb-2">1,000.00</div>
+                            <div class="text-blue-400 font-medium mb-8">Tethor USD</div>
+                            <div class="flex justify-between text-sm text-gray-400 mb-1">
+                                <span>USD Value</span>
+                                <span>1,000.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-400 mb-1">
+                                <span>Exchange Rate</span>
+                                <span>1 TUSD = 1.00 USD</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-400">
+                                <span>Market Cap</span>
+                                <span>$1.2B</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 px-6 md:px-12 lg:px-24 bg-gray-800 bg-opacity-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Why Choose Tethor USD?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="token-card rounded-xl p-8 border border-gray-700">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i data-feather="shield" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fully Collateralized</h3>
+                    <p class="text-gray-300">
+                        Every TUSD token is backed 1:1 by US dollars held in regulated financial institutions.
+                    </p>
+                </div>
+                <div class="token-card rounded-xl p-8 border border-gray-700">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i data-feather="eye" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Transparent</h3>
+                    <p class="text-gray-300">
+                        Regular attestations by independent auditors ensure complete transparency of reserves.
+                    </p>
+                </div>
+                <div class="token-card rounded-xl p-8 border border-gray-700">
+                    <div class="w-16 h-16 rounded-full gradient-bg flex items-center justify-center mb-6">
+                        <i data-feather="zap" class="text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fast & Low Cost</h3>
+                    <p class="text-gray-300">
+                        Instant global transactions with minimal fees on multiple blockchains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 px-6 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">How Tethor USD Works</h2>
+            <p class="text-xl text-gray-300 text-center mb-16 max-w-3xl mx-auto">
+                A simple, transparent process ensures the stability and reliability of TUSD.
+            </p>
+            
+            <div class="relative">
+                <div class="hidden md:block absolute h-full border-l-2 border-dashed border-blue-400 left-1/2 transform -translate-x-1/2"></div>
+                
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Step 1 -->
+                    <div class="md:text-right">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white font-bold text-xl mb-4">
+                            1
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Deposit USD</h3>
+                        <p class="text-gray-300">
+                            Users deposit US dollars into Tethor's regulated custodial accounts.
+                        </p>
+                    </div>
+                    
+                    <!-- Spacer for step 2 -->
+                    <div class="md:hidden"></div>
+                    
+                    <!-- Step 2 -->
+                    <div class="md:col-start-1 md:text-right">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white font-bold text-xl mb-4">
+                            3
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Redeem Anytime</h3>
+                        <p class="text-gray-300">
+                            Holders can redeem TUSD for USD at any time 1:1.
+                        </p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div>
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white font-bold text-xl mb-4">
+                            2
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Mint TUSD</h3>
+                        <p class="text-gray-300">
+                            An equivalent amount of TUSD is minted and delivered to the user's wallet.
+                        </p>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="md:col-start-2">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full gradient-bg text-white font-bold text-xl mb-4">
+                            4
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Burn TUSD</h3>
+                        <p class="text-gray-300">
+                            Redeemed TUSD is burned and equivalent USD is returned to the user.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 md:px-12 lg:px-24 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience Stable Digital Value?</h2>
+            <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                Join millions already using Tethor USD for trading, saving, and global transactions.
+            </p>
+            <button class="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+                Get Started with Tethor USD
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-12 px-6 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full gradient-bg flex items-center justify-center">
+                            <i data-feather="dollar-sign" class="text-white"></i>
+                        </div>
+                        <span class="text-lg font-bold">Tethor USD</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        The most transparent and reliable digital dollar.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i data-feather="github"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i data-feather="telegram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400 transition"><i data-feather="discord"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Whitepaper</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Audit Reports</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Press</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-blue-400 transition">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Tethor USD. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition text-sm">Status</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition text-sm">Bug Bounty</a>
+                    <a href="#" class="text-gray-500 hover:text-blue-400 transition text-sm">Licenses</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Vanta.js
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0070f3,
+            backgroundColor: 0x111827,
+            size: 0.8
+        });
+
+        // Initialize feather icons
+        feather.replace();
+
+        // Simple animation for the hero section
+        document.addEventListener('DOMContentLoaded', function() {
+            anime({
+                targets: '.hero-radial',
+                opacity: [0, 0.5],
+                duration: 1500,
+                easing: 'easeOutQuad'
+            });
+        });
+    </script>
+</body>
+</html>
